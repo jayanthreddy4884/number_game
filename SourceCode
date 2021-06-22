@@ -1,0 +1,22 @@
+import random
+num=random.randint(1,10)
+for i in range(0,3):
+    player=int(input("Guess the Number : "))
+    if player==num:
+        print("Hurray!!!!")
+        print(num, "is the correct number")
+        break
+    elif player>num:
+        print("The guessed value is higher than the number!! ")
+        if i==2:
+            break
+        print("Please try again.")
+    
+    elif player<num:
+        print("The guessed value is lower than the number!! ")
+        if i==2:
+            break
+        print("Please try again.")    
+else:
+    print("the number is ", num)
+    print("Nice Try !!!  Play again")
